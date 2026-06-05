@@ -1,0 +1,154 @@
+/* Experience section styles */
+.experience-section {
+    padding: 6rem 2rem;
+    background: radial-gradient(circle at 80% 20%, rgba(108, 99, 255, 0.08), transparent 30%),
+                linear-gradient(180deg, #06070d, #07101a);
+    color: #e6eef9;
+}
+
+.experience-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3.5rem;
+    background: linear-gradient(135deg, #70a9ff, #6c63ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.experience-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.expertise-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(108, 99, 255, 0.12);
+    padding: 2rem;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.expertise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6c63ff, #00d1b2, #ff6584);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.expertise-card:hover::before {
+    opacity: 1;
+}
+
+.expertise-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 209, 178, 0.35);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+}
+
+.card-title {
+    text-align: center;
+    color: #7fb7ff;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.3s ease, padding-left 0.3s ease;
+    border-radius: 8px;
+}
+
+.skill-row:hover {
+    background: rgba(108, 99, 255, 0.06);
+    padding-left: 0.5rem;
+}
+
+.skill-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6c63ff, #00d1b2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.skill-row:hover .skill-icon {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 6px 18px rgba(108, 99, 255, 0.35);
+}
+
+.skill-name {
+    flex: 0 0 100px;
+    color: #dbe9ff;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.progress-wrap {
+    flex: 1;
+}
+
+.progress-track {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6c63ff, #00d1b2, #7fd0ff);
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 209, 178, 0.4);
+}
+
+.p-90 { --target-width: 90%; }
+.p-80 { --target-width: 80%; }
+.p-75 { --target-width: 75%; }
+.p-70 { --target-width: 70%; }
+.p-60 { --target-width: 60%; }
+.p-50 { --target-width: 50%; }
+
+@media (max-width: 1000px) {
+    .experience-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .expertise-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-section {
+        padding: 3rem 1rem;
+    }
+}

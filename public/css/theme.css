@@ -1,0 +1,326 @@
+/* Theme system — dark (default) & light overrides */
+
+html,
+:root,
+[data-theme="dark"] {
+    --bg-body: #121212;
+    --bg-hero: radial-gradient(circle at top left, rgba(108, 99, 255, 0.18), transparent 24%),
+               radial-gradient(circle at top right, rgba(255, 101, 132, 0.14), transparent 18%),
+               linear-gradient(180deg, #06070d 0%, #0d0f17 100%);
+    --bg-section: radial-gradient(circle at top left, rgba(20, 143, 255, 0.08), transparent 22%),
+                  linear-gradient(180deg, #06070d 0%, #0d0f17 100%);
+    --bg-experience: radial-gradient(circle at 80% 20%, rgba(108, 99, 255, 0.08), transparent 30%),
+                     linear-gradient(180deg, #06070d, #07101a);
+    --bg-contact: linear-gradient(180deg, #06070d, #07101a);
+    --bg-footer: linear-gradient(180deg, #07131f 0%, #06101a 100%);
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --bg-card-hover: rgba(255, 255, 255, 0.05);
+    --bg-nav: rgba(10, 15, 28, 0.95);
+    --bg-nav-mobile: rgba(20, 20, 25, 0.98);
+    --bg-profile-frame: rgba(12, 15, 23, 0.86);
+    --bg-service-card: rgba(10, 16, 28, 0.9);
+    --bg-modal: linear-gradient(160deg, rgba(12, 18, 32, 0.98), rgba(8, 13, 25, 0.98));
+    --bg-modal-overlay: rgba(1, 8, 22, 0.88);
+    --bg-tooltip: rgba(12, 15, 28, 0.95);
+    --bg-scrollbar-track: #0a0d14;
+    --text-primary: #f4f4f4;
+    --text-secondary: #b8c1d1;
+    --text-muted: #8b98ac;
+    --text-code: #e5e7eb;
+    --text-accent: #6ac9ff;
+    --text-code-title: #70e0ff;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-card: rgba(255, 255, 255, 0.09);
+    --border-nav: rgba(255, 255, 255, 0.08);
+    --shadow-card: 0 40px 90px rgba(0, 0, 0, 0.3);
+    --shadow-profile: 0 25px 80px rgba(0, 0, 0, 0.45);
+    --nav-link-bg: rgba(255, 255, 255, 0.03);
+    --social-bg: rgba(255, 255, 255, 0.08);
+    --social-border: rgba(255, 255, 255, 0.14);
+    --profile-border: rgba(255, 255, 255, 0.12);
+    --about-text: #d4d9e7;
+    --stat-strong: #fff;
+    --service-text: rgba(226, 236, 255, 0.8);
+    --experience-text: #e6eef9;
+    --contact-text: #e6eef9;
+    --footer-text: #e9f2ff;
+    --footer-link: #a3bcff;
+    --project-tag-bg: rgba(108, 99, 255, 0.15);
+    --project-tag-text: #a8b4ff;
+    --theme-toggle-bg: rgba(255, 255, 255, 0.06);
+    --theme-toggle-border: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="light"] {
+    --bg-body: #f0f2f8;
+    --bg-hero: radial-gradient(circle at top left, rgba(108, 99, 255, 0.1), transparent 24%),
+               radial-gradient(circle at top right, rgba(255, 101, 132, 0.08), transparent 18%),
+               linear-gradient(180deg, #eef1f8 0%, #f8f9fc 100%);
+    --bg-section: radial-gradient(circle at top left, rgba(20, 143, 255, 0.05), transparent 22%),
+                  linear-gradient(180deg, #eef1f8 0%, #f5f7fb 100%);
+    --bg-experience: radial-gradient(circle at 80% 20%, rgba(108, 99, 255, 0.06), transparent 30%),
+                     linear-gradient(180deg, #eef1f8, #e8ecf4);
+    --bg-contact: linear-gradient(180deg, #eef1f8, #e8ecf4);
+    --bg-footer: linear-gradient(180deg, #e2e8f4 0%, #d8e0ee 100%);
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-card-hover: rgba(255, 255, 255, 0.95);
+    --bg-nav: rgba(255, 255, 255, 0.92);
+    --bg-nav-mobile: rgba(255, 255, 255, 0.98);
+    --bg-profile-frame: rgba(255, 255, 255, 0.9);
+    --bg-service-card: rgba(255, 255, 255, 0.9);
+    --bg-modal: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(245, 247, 252, 0.98));
+    --bg-modal-overlay: rgba(15, 23, 42, 0.45);
+    --bg-tooltip: rgba(255, 255, 255, 0.98);
+    --bg-scrollbar-track: #e2e8f0;
+    --text-primary: #1a1f2e;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --text-code: #2d3748;
+    --text-accent: #4a6cf7;
+    --text-code-title: #3182ce;
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --border-card: rgba(0, 0, 0, 0.08);
+    --border-nav: rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.08);
+    --shadow-profile: 0 20px 60px rgba(0, 0, 0, 0.1);
+    --nav-link-bg: rgba(0, 0, 0, 0.04);
+    --social-bg: rgba(0, 0, 0, 0.05);
+    --social-border: rgba(0, 0, 0, 0.1);
+    --profile-border: rgba(108, 99, 255, 0.2);
+    --about-text: #4a5568;
+    --stat-strong: #1a1f2e;
+    --service-text: #4a5568;
+    --experience-text: #2d3748;
+    --contact-text: #2d3748;
+    --footer-text: #2d3748;
+    --footer-link: #4a6cf7;
+    --project-tag-bg: rgba(108, 99, 255, 0.1);
+    --project-tag-text: #5a67d8;
+    --theme-toggle-bg: rgba(0, 0, 0, 0.05);
+    --theme-toggle-border: rgba(0, 0, 0, 0.1);
+}
+
+/* Apply theme variables globally */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.modern-navbar {
+    background: var(--bg-nav);
+    border-color: var(--border-nav);
+}
+
+.nav-links {
+    color: var(--text-primary);
+    background: var(--nav-link-bg);
+}
+
+.nav-links:hover,
+.nav-links.active {
+    color: var(--text-primary);
+}
+
+.nav-toggle .bar {
+    background-color: var(--text-primary);
+}
+
+
+.hero-section {
+    background: var(--bg-hero);
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+}
+
+.code-card {
+    background: var(--bg-card);
+    border-color: var(--border-card);
+    box-shadow: var(--shadow-card);
+}
+
+.code-block {
+    color: var(--text-code);
+}
+
+.code-card-title {
+    color: var(--text-code-title);
+}
+
+.profile-frame {
+    background: var(--bg-profile-frame);
+    box-shadow: var(--shadow-profile);
+}
+
+.social-ring a {
+    background: var(--social-bg);
+    border-color: var(--social-border);
+    color: var(--text-primary);
+}
+
+.about-page {
+    background: var(--bg-section);
+    color: var(--text-primary);
+}
+
+.about-description p {
+    color: var(--about-text);
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border-color: var(--border-subtle);
+}
+
+.stat-card strong {
+    color: var(--stat-strong);
+}
+
+.stat-label {
+    color: var(--text-muted);
+}
+
+.about-description {
+    background: var(--bg-card);
+    border-color: var(--border-subtle);
+}
+
+.skill-tag {
+    background: var(--bg-card);
+    border-color: var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.experience-section {
+    background: var(--bg-experience);
+    color: var(--experience-text);
+}
+
+.expertise-card {
+    background: var(--bg-card);
+}
+
+.contact-section {
+    background: var(--bg-contact);
+    color: var(--contact-text);
+}
+
+.info-card {
+    background: var(--bg-card);
+}
+
+.modern-footer {
+    background: var(--bg-footer);
+    color: var(--footer-text);
+    border-top-color: var(--border-subtle);
+}
+
+.footer-nav a {
+    color: var(--footer-link);
+}
+
+.service-card {
+    background: var(--bg-service-card);
+}
+
+.service-card p {
+    color: var(--service-text);
+}
+
+.service-card-top h3 {
+    color: var(--text-primary);
+}
+
+.modal-overlay {
+    background: var(--bg-modal-overlay);
+}
+
+.modal-content {
+    background: var(--bg-modal);
+}
+
+.modal-content h3 {
+    color: var(--text-primary);
+}
+
+.modal-content p {
+    color: var(--text-secondary);
+}
+
+[data-tooltip]::before {
+    background: var(--bg-tooltip);
+    color: var(--text-primary);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-scrollbar-track);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--theme-toggle-border);
+    background: var(--theme-toggle-bg);
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.25);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--text-primary);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s ease;
+}
+
+.theme-toggle .icon-moon path {
+    fill: var(--text-primary);
+    stroke: none;
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-sun,
+[data-theme="dark"] .theme-toggle .icon-sun {
+    opacity: 1;
+    transform: rotate(0);
+}
+
+html[data-theme="dark"] .theme-toggle .icon-moon,
+[data-theme="dark"] .theme-toggle .icon-moon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+html[data-theme="light"] .theme-toggle .icon-sun,
+[data-theme="light"] .theme-toggle .icon-sun {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+html[data-theme="light"] .theme-toggle .icon-moon,
+[data-theme="light"] .theme-toggle .icon-moon {
+    opacity: 1;
+    transform: rotate(0);
+}

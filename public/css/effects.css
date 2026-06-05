@@ -1,0 +1,243 @@
+/* Global effects, animations & utilities */
+
+:root {
+    --glow-primary: rgba(108, 99, 255, 0.45);
+    --glow-secondary: rgba(255, 101, 132, 0.35);
+    --glow-accent: rgba(0, 209, 178, 0.35);
+    --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0d14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #6c63ff, #ff6584);
+    border-radius: 10px;
+}
+
+::selection {
+    background: rgba(108, 99, 255, 0.35);
+    color: #fff;
+}
+
+/* Animated gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #6c63ff 0%, #ff6584 40%, #6ac9ff 70%, #6c63ff 100%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+}
+
+/* Scroll reveal */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s var(--ease-spring), transform 0.7s var(--ease-spring);
+}
+
+[data-reveal="left"] {
+    transform: translateX(-40px);
+}
+
+[data-reveal="right"] {
+    transform: translateX(40px);
+}
+
+[data-reveal="scale"] {
+    transform: scale(0.92);
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Stagger children */
+[data-reveal-stagger] > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s var(--ease-spring), transform 0.6s var(--ease-spring);
+}
+
+[data-reveal-stagger].is-visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(7) { transition-delay: 0.65s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(8) { transition-delay: 0.75s; opacity: 1; transform: none; }
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+.pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* CSS tooltips */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    padding: 0.45rem 0.85rem;
+    background: rgba(12, 15, 28, 0.95);
+    border: 1px solid rgba(108, 99, 255, 0.35);
+    border-radius: 8px;
+    color: #e8eeff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s var(--ease-spring);
+    z-index: 50;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-tooltip]::after {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(108, 99, 255, 0.35);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+[data-tooltip]:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+/* Glass card hover glow */
+.glow-card {
+    position: relative;
+    transition: transform 0.4s var(--ease-spring), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.glow-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--glow-primary), var(--glow-secondary), var(--glow-accent));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+    filter: blur(12px);
+}
+
+.glow-card:hover {
+    border-color: rgba(108, 99, 255, 0.35) !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 40px var(--glow-primary);
+}
+
+.glow-card:hover::before {
+    opacity: 0.5;
+}
+
+/* Section title underline */
+.section-title-modern {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title-modern::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #6c63ff, #ff6584, #00d1b2);
+    border-radius: 4px;
+}
+
+/* Shimmer button */
+.shimmer-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transition: left 0.5s ease;
+}
+
+.shimmer-btn:hover::after {
+    left: 120%;
+}
+
+/* Typing cursor for hero code block */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.typing-cursor {
+    color: #70e0ff;
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+}
+
+.typing-cursor.is-done {
+    animation: none;
+    opacity: 0;
+}
+
+/* Progress bar animation */
+.progress-fill {
+    width: 0 !important;
+    transition: width 1.2s var(--ease-spring);
+}
+
+.progress-fill.is-animated {
+    width: var(--target-width) !important;
+}
