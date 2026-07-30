@@ -1,17 +1,17 @@
 <footer class="modern-footer">
     <div class="footer-body">
         <div class="footer-brand">
-            <h1>Dhirendra Tripathi</h1>
+
         </div>
 
-        <nav class="footer-nav">
+        <!-- <nav class="footer-nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
-        </nav>
+        </nav> -->
 
         <div class="footer-social-row">
             <a href="https://github.com/dhirendratripathi45?tab=repositories" target="_blank" class="social-icon"

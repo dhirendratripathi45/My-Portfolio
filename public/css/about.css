@@ -114,7 +114,7 @@
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    background-image: url('../images/dk.jpg.png');
+    background-image: url('../images/dktk.jpg');
     background-size: cover;
     background-position: center;
     border: 8px solid rgba(255, 255, 255, 0.12);
@@ -149,6 +149,12 @@
     transform: translateY(-4px);
     background: linear-gradient(135deg, #6c63ff, #ff6584);
     box-shadow: 0 18px 35px rgba(108, 99, 255, 0.3);
+}
+
+.social-ring a svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 .profile-upload-section {
@@ -287,7 +293,7 @@ body {
     border-radius: 50%;
     border: 8px solid #121212;
     background-color: #2a2a2a;
-    background-image: url('../images/dk.jpg.png');
+    background-image: url('../images/dktk.jpg');
     background-size: cover;
     background-position: center;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);

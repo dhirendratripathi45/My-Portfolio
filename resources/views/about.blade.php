@@ -14,24 +14,26 @@
                 <div class="stats-grid" data-reveal-stagger>
                     <div class="stat-card glow-card">
                         <span class="stat-label">Experience</span>
-                        <strong>Continue my last Years semester</strong>
+                        <strong>Laravel Intern for 3 months at Meraai Technologies</strong>
                     </div>
                     <div class="stat-card glow-card">
                         <span class="stat-label">Clients</span>
-                        <strong>20+ Clients</strong>
+                        <strong>5+ Clients</strong>
                     </div>
                     <div class="stat-card glow-card">
                         <span class="stat-label">Projects</span>
-                        <strong>25+ Projects</strong>
+                        <strong>5+ Projects</strong>
                     </div>
                 </div>
 
                 <div class="about-description glow-card">
                     <p>
-                        Full Stack Web and Mobile App Developer with over continuous years of experience. I build modern, responsive applications that look great and perform reliably across devices.
+                        Full Stack Web and Mobile App Developer with over continuous years of experience. I build
+                        modern, responsive applications that look great and perform reliably across devices.
                     </p>
                     <p>
-                        My work spans front-end interfaces, backend APIs, and polished user experiences. I enjoy solving problems with clean code, strong architecture, and efficient workflows.
+                        My work spans front-end interfaces, backend APIs, and polished user experiences. I enjoy solving
+                        problems with clean code, strong architecture, and efficient workflows.
                     </p>
                 </div>
 

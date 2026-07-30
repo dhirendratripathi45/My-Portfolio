@@ -158,6 +158,12 @@
     border-color: transparent;
 }
 
+.social-ring a svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
 .social-ring a:nth-child(1) { animation: float 4s ease-in-out infinite; }
 .social-ring a:nth-child(2) { animation: float 4s ease-in-out 0.5s infinite; }
 .social-ring a:nth-child(3) { animation: float 4s ease-in-out 1s infinite; }
@@ -214,7 +220,7 @@
     height: 180px;
     border-radius: 30px;
     background-color: #1a2130;
-    background-image: url('../images/C:\\Users\\dkttr\\my-portfolio\\public\\images\\dk.jpg.png');
+    background-image: url('../images/C:\\Users\\dkttr\\my-portfolio\\public\\images\\profileee.jpg');
     background-size: cover;
     background-position: center;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);

@@ -19,5 +19,4 @@ Route::post('/contact', function (Request $request) {
 
     // TODO: Hook this into mail or storage as needed.
     return redirect('/')->with('status', 'Your message was sent successfully.');
-});
-
+    });
