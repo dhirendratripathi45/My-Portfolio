@@ -34,5 +34,5 @@ RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 ENV APP_ENV=local
 ENV APP_DEBUG=true
-
+CMD ["sh", "-c", "php artisan migrate --force && apache2-foreground"]
 EXPOSE 80
